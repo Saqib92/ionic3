@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ 
+
+<button ion-button full color="primary" (click)="toLogin()">Log In</button>
+<button ion-button full color="primary" (click)="toSingin()">Sign In</button>
+<button ion-button full color="primary" (click)="toSlider()">Slider</button>
+
+<button ion-button full (click)="myCam()">Open Camera</button>
+<button ion-button full (click)="myGal()">Open Gallery</button>
+<button ion-button full (click)="actSheet()">Action sheet</button>
+<button ion-button full (click)="loginWithFb()">Login With Facebook</button>
+<button ion-button full (click)="myFcm()">FCM Token</button>
+<button ion-button full (click)="loginWithLinkedin()">Login with linkedin</button>
+<button ion-button full (click)="jqueryFunc()"> clickhere</button> 
+<button ion-button full (click)="openFlash()">Flash Ligt On</button>
+<button ion-button full (click)="closeFlash()">Flash light Off</button>
+<button ion-button full (click)="getCountries()">Get Countries</button>
+<button ion-button full (click)="getPermission()">Get Permission</button>
+<button ion-button full (click)="startListening()">Start Listening</button>
+<!-- <button ion-button full (click)="stopRec()">Audio To text</button> -->
+
+<ion-card>
+    <ion-card-header>This is what I understood...</ion-card-header>
+    <ion-card-content>
+      <ion-list>
+<!--         <ion-item *ngFor="let match of matches"> -->
+
+        <ion-item>
+          {{ matches }}
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+
+<ion-item>
+    <ion-label floating>Enter Sectence:</ion-label>
+    <ion-input type="text" [(ngModel)]="texttospeech"></ion-input>
+</ion-item>
+<button ion-button full (click)="textSpeech()">Text To Speech</button>
+
+
+
+<p>This is ng-repeat example for *ngFor='let a of users'</p>
+<div *ngFor='let a of users'>  
+  	
+    <p><b>{{ a.name }}</b> is <b>{{ a.age }}</b> years old.</p>
+ 
+</div>
+<div *ngFor='let c of myCon'>  
+    
+    <p><b>{{ c.name }}</b></p>
+ 
+</div>
+
+<div>
+  <button (click)="ngifFunc()" ion-button small>Click</button>
+
+  <div *ngIf="showSelected == '5'">
+    <p>Condition Passed!</p>
+  </div>
+  
+  <div *ngIf="showSelected != '5'">
+    <p>Condition Failed!</p>
+  </div>
+</div>
+
+<h1 class="title" style="display:none">
+  {{title}}
+</h1>
+
+
+
+</ion-content>
